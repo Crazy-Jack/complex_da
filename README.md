@@ -4,13 +4,13 @@
 
 There are two dataset: 3Av2 and 3E.
 3Av2:
-`
+```
 >>> data = pickle.load(open("/projects/rsalakhugroup/complex/domain_adaptation/processed_file_3Av2.pkl", "rb"))
 >>> data.keys()
 dict_keys(['tr_data', 'tr_lbl', 'te_data', 'te_lbl'])
 >>> data['tr_data'].shape
 (5000, 1600, 2)
-`
+```
 tr_data (training data): (5000, 1600, 2) # 5000 samples, 1600 time steps, 2 feature dimension (real and imaginary)
 tr_lbl  (training label): (5000, 50) # 5000 labels, each sample belongs to one of the 50 classes, one-hot encoding
 te_data (test     data): (5000, 1600, 2) # same shape as tr_data
