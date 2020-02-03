@@ -1,6 +1,7 @@
 # complex_da
-TODO: update repository by adding Muqiao's implementation  
-Complex time-series domain adaptation project.
+
+Complex time-series domain adaptation project.  
+GAN model performs better; Muqiao's TVD version (a better TVD implementation) will be updated if needed.
 ## data
 
 There are two dataset: 3Av2 and 3E.  
