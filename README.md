@@ -5,7 +5,7 @@
 There are two dataset: 3Av2 and 3E.
 3Av2:
 ```
->>> data = pickle.load(open("/projects/rsalakhugroup/complex/domain_adaptation/processed_file_3Av2.pkl", "rb"))
+>>> data = pickle.load(open("processed_file_3Av2.pkl", "rb")) # replace 3Av2 to 3E for dataset 3E
 >>> data.keys()
 dict_keys(['tr_data', 'tr_lbl', 'te_data', 'te_lbl'])
 >>> data['tr_data'].shape
