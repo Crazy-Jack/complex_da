@@ -2,7 +2,7 @@
 
 ## data
 
-There are two dataset: 3Av2 and 3E.
+There are two dataset: 3Av2 and 3E.  
 3Av2:
 ```
 >>> data = pickle.load(open("processed_file_3Av2.pkl", "rb")) # replace 3Av2 to 3E for dataset 3E
@@ -16,7 +16,7 @@ tr_lbl  (training label): (5000, 50) # 5000 labels, each sample belongs to one o
 te_data (test     data): (5000, 1600, 2) # same shape as tr_data  
 te_lbl  (test     label): (5000, 50) # labels shape as tr_label  
 
-3E:
+3E:  
 tr_data (training data): (14170, 1600, 2) # 14170 samples, 1600 time steps, 2 feature dimension (real and imaginary)  
 tr_lbl  (training label): (14170, 65) # 14170 labels, each sample belongs to one of the 65 classes, one-hot encoding  
 te_data (test     data): (7085, 1600, 2) # 7085 samples, 1600 time steps, 2 feature dimension (real and imaginary)  
