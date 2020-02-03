@@ -1,7 +1,7 @@
 # complex_da
 
 Complex time-series domain adaptation project.  
-GAN model performs better; Muqiao's TVD version (a better TVD implementation) will be updated if needed.
+Try gan model first; a better implementation of TVD coming soon.
 ## data
 
 There are two dataset: 3Av2 and 3E.  
