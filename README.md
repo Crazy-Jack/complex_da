@@ -24,12 +24,17 @@ te_lbl  (test     label): (7085, 65) # 7085 labels, each sample belongs to one o
 
 
 `
-## command
+## example command
 ```
-python3 main.py --lr_clf 1e-4 --epochs 400
-
 # GAN
-CUDA_VISIBLE_DEVICES=0 python3 main.py --lr_gan 5e-2 --lr_clf 1e-3 --model gan --batch_size 32 --epochs_gan 100 --epochs_gan 100 --epochs 100 --gap 4 --file {}_us_20.pkl
+CUDA_VISIBLE_DEVICES=0 python3 main_gan.py --lr_gan 5e-2 --lr_clf 1e-3 --model gan --batch_size 32 --epochs_gan 100 --epochs_gan 100 --epochs 100 --gap 4 --file {}3A_s_50.pkl
 
-CUDA_VISIBLE_DEVICES=0 python3 main.py --lr_gan 1e-3 --lr_clf 1e-4 --model gan --epochs_gan 100 --epochs 100 --gap 10 >> ~/result/complex_da/$(date "+%Y%m%d%H%M%S%N"").txt &
+# TVD
+CUDA_VISIBLE_DEVICES=0 python3 main_tvd.py --lr_tvd 5e-3 --lr_clf 5e-3 --model tvd --batch_size 32 --epochs_tvd 10 --epochs 2 --gap 2 --file 3A_s_50.pkl
+
+--lr_gan / lr_tvd: learning rate of adversarial / adaptation training
+--lr_clf : learning rate of classifier
+--epochs_gan / epochs_tvd: epochs for adversarial / adaptation training
+--gap: train generator [gap] times, train discriminator once
+
 ```
